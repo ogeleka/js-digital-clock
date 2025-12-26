@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+}
+.hidden {
+  display: block;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.center {
+  display: grid;
+  place-items: center;
+}
+.gap {
+  gap: 2rem;
+}
+.shadow {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.95);
+}

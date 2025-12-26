@@ -1,0 +1,117 @@
+@import url("utility.css");
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid red; */
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+}
+nav {
+  height: 8vh;
+  padding: 0 4rem;
+  background: white;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.35s ease-in-out;
+}
+nav a:hover {
+  color: red;
+  font-weight: 600;
+}
+.hamburger {
+  width: 2.5rem;
+  height: 1.2rem;
+  display: none;
+  flex-direction: column;
+}
+.bars {
+  background: black;
+  height: 0.1rem;
+  transition: all 0.35s linear;
+}
+.mobile-navigation-links {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: -15rem;
+  width: 100%;
+  height: 10rem;
+  opacity: 0;
+  text-align: center;
+  border-bottom: 1px solid black;
+  transition: all 0.35s linear;
+}
+.mobile-navigation-links.active {
+  top: 8vh;
+  opacity: 1;
+  z-index: 1;
+}
+.mobile-navigation-links li {
+  height: 50%;
+}
+.mobile-navigation-links li:first-child {
+  border-bottom: 1px solid black;
+}
+.hamburger.active .bars:first-child {
+  transform: translateY(0.5rem) rotate(45deg);
+}
+.hamburger.active .bars:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bars:nth-child(3) {
+  transform: translateY(-0.7rem) rotate(-45deg);
+}
+main {
+  height: 85vh;
+}
+.app-wrapper > section {
+  font-size: 10rem;
+}
+.app-wrapper > section:nth-child(2)::before,
+.app-wrapper > section:nth-child(2)::after {
+  content: ":";
+  position: relative;
+  bottom: 1rem;
+  animation: blink 1s infinite;
+}
+footer {
+  height: 7vh;
+}
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 0 2rem;
+  }
+  .app-wrapper > section {
+    font-size: 6rem;
+  }
+  .app-wrapper > section:nth-child(2)::before,
+  .app-wrapper > section:nth-child(2)::after {
+    bottom: 0.5rem;
+  }
+  .res-flex {
+    display: flex;
+  }
+  .res-hidden {
+    display: none;
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

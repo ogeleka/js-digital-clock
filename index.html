@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Digital Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="flex justify-between items-center shadow">
+          <div class="logo"><a href="/">JS Digital Clock</a></div>
+          <div class="navigation">
+            <ul class="flex gap res-hidden">
+              <li><a href="#">About</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+            <div class="hamburger res-flex justify-between">
+              <section class="bars"></section>
+              <section class="bars"></section>
+              <section class="bars"></section>
+              <ul class="mobile-navigation-links">
+                <li class="center"><a href="#">About</a></li>
+                <li class="center"><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="center">
+        <div class="app-wrapper flex">
+          <section class="hours"></section>
+          <section class="minutes"></section>
+          <section class="seconds"></section>
+        </div>
+
+        <div class="app-wrapper flex">
+          <section class="day"></section>
+        </div>
+
+        <div class="app-wrapper flex">
+          <section class="day2"></section>
+          <section class="month"></section>
+          <section class="year"></section>
+        </div>
+      </main>
+      <footer class="center">
+        <p>&copy; <span class="year"></span> Digital Clock by OGELEKA</p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

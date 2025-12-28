@@ -1,6 +1,4 @@
-/* =========================
-   GLOBALS
-========================= */
+//   GLOBALS
 const { DateTime } = luxon;
 
 const hamburger = document.querySelector(".hamburger");
@@ -8,9 +6,7 @@ const timezoneSelect = document.getElementById("timezone");
 
 let selectedZone = DateTime.local().zoneName;
 
-/* =========================
-   MOBILE MENU
-========================= */
+  //  MOBILE MENU
 function showMobileMenu() {
   const mobileMenu = document.querySelector(".mobile-navigation-links");
 
@@ -18,17 +14,14 @@ function showMobileMenu() {
   mobileMenu.classList.toggle("active");
 }
 
-/* =========================
-   YEAR (FOOTER)
-========================= */
+  //  YEAR (FOOTER)
+
 function getCurrentYear() {
   const yearUI = document.querySelector("footer .year");
   yearUI.textContent = DateTime.now().year;
 }
 
-/* =========================
-   DAY SUFFIX
-========================= */
+  //  DAY SUFFIX
 function getDaySuffix(day) {
   if (day === 1 || day === 21 || day === 31) return "st";
   if (day === 2 || day === 22) return "nd";
@@ -36,9 +29,7 @@ function getDaySuffix(day) {
   return "th";
 }
 
-/* =========================
-   TIMEZONE HANDLING
-========================= */
+//    TIMEZONE HANDLING
 if (timezoneSelect) {
   selectedZone = timezoneSelect.value;
 
@@ -47,9 +38,7 @@ if (timezoneSelect) {
   });
 }
 
-/* =========================
-   CLOCK LOGIC (LUXON)
-========================= */
+  //  CLOCK LOGIC (LUXON)
 function activateClock() {
   setInterval(() => {
     const hoursUI = document.querySelector(".hours");

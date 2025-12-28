@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Digital Calculator</title>
+    <title>JS Digital Clock</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <div class="container">
       <header>
@@ -28,7 +29,20 @@
           </div>
         </nav>
       </header>
+
       <main class="center">
+
+        <!-- Timezone Selector -->
+        <div class="app-wrapper flex">
+          <select id="timezone">
+            <option value="Africa/Lagos">Africa / Lagos</option>
+            <option value="Europe/London">Europe / London</option>
+            <option value="America/New_York">America / New York</option>
+            <option value="Asia/Tokyo">Asia / Tokyo</option>
+          </select>
+        </div>
+
+        <!--  Digital Clock -->
         <div class="app-wrapper flex">
           <section class="hours"></section>
           <section class="minutes"></section>
@@ -45,10 +59,14 @@
           <section class="year"></section>
         </div>
       </main>
+
       <footer class="center">
         <p>&copy; <span class="year"></span> Digital Clock by OGELEKA</p>
       </footer>
     </div>
+
+    <!-- ✅ Luxon CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
